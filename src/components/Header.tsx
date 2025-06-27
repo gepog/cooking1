@@ -107,7 +107,7 @@ export const Header: React.FC<HeaderProps> = ({
           });
         }
       }, 100);
-    } else if (item === 'China') {
+    } else if (item === 'Popular') {
       setTimeout(() => {
         const mostPopularElement = document.querySelector('[data-section="most-popular"]');
         if (mostPopularElement) {
@@ -133,7 +133,7 @@ export const Header: React.FC<HeaderProps> = ({
       setTimeout(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }, 100);
-    } else if (item === 'Germany') {
+    } else if (item === 'Practical Information') {
       setTimeout(() => {
         const contentRows = document.querySelectorAll('[data-content-row]');
         if (contentRows.length >= 2) {
@@ -151,82 +151,10 @@ export const Header: React.FC<HeaderProps> = ({
           }
         }
       }, 100);
-    } else if (item === 'Italy') {
-      setTimeout(() => {
-        const contentRows = document.querySelectorAll('[data-content-row]');
-        if (contentRows.length >= 3) {
-          const thirdRow = contentRows[2];
-          const titleElement = thirdRow.querySelector('h2');
-          if (titleElement) {
-            const headerHeight = 80;
-            const elementTop = titleElement.getBoundingClientRect().top + window.pageYOffset;
-            const offsetPosition = elementTop - headerHeight;
-            
-            window.scrollTo({
-              top: offsetPosition,
-              behavior: 'smooth'
-            });
-          }
-        }
-      }, 100);
-    } else if (item === 'Japan') {
-      setTimeout(() => {
-        const contentRows = document.querySelectorAll('[data-content-row]');
-        if (contentRows.length >= 4) {
-          const fourthRow = contentRows[3];
-          const titleElement = fourthRow.querySelector('h2');
-          if (titleElement) {
-            const headerHeight = 80;
-            const elementTop = titleElement.getBoundingClientRect().top + window.pageYOffset;
-            const offsetPosition = elementTop - headerHeight;
-            
-            window.scrollTo({
-              top: offsetPosition,
-              behavior: 'smooth'
-            });
-          }
-        }
-      }, 100);
-    } else if (item === 'Mexico') {
-      setTimeout(() => {
-        const contentRows = document.querySelectorAll('[data-content-row]');
-        if (contentRows.length >= 5) {
-          const fifthRow = contentRows[4];
-          const titleElement = fifthRow.querySelector('h2');
-          if (titleElement) {
-            const headerHeight = 80;
-            const elementTop = titleElement.getBoundingClientRect().top + window.pageYOffset;
-            const offsetPosition = elementTop - headerHeight;
-            
-            window.scrollTo({
-              top: offsetPosition,
-              behavior: 'smooth'
-            });
-          }
-        }
-      }, 100);
-    } else if (item === 'Spain') {
-      setTimeout(() => {
-        const contentRows = document.querySelectorAll('[data-content-row]');
-        if (contentRows.length >= 6) {
-          const sixthRow = contentRows[5];
-          const titleElement = sixthRow.querySelector('h2');
-          if (titleElement) {
-            const headerHeight = 80;
-            const elementTop = titleElement.getBoundingClientRect().top + window.pageYOffset;
-            const offsetPosition = elementTop - headerHeight;
-            
-            window.scrollTo({
-              top: offsetPosition,
-              behavior: 'smooth'
-            });
-          }
-        }
-      }, 100);
     }
   };
 
-  const navItems = ['Home', 'China', 'Germany', 'Italy', 'Japan', 'Mexico', 'Spain', 'My List'];
+  const navItems = ['Home', 'Popular', 'My List', 'Practical Information'];
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
